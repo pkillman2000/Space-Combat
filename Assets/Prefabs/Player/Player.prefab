@@ -332,9 +332,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3810027079815068415}
     m_Modifications:
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startSpeed.minScalar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.25342646
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.5793003
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.8018868
+      objectReference: {fileID: 0}
     - target: {fileID: 4115893726334957975, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
       propertyPath: m_Name
       value: DamageVFX (0)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4115893726334957975, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8539665314835749391, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
       propertyPath: m_LocalPosition.x
@@ -481,9 +509,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3810027079815068415}
     m_Modifications:
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startSpeed.minScalar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.25342646
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.5793003
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.8018868
+      objectReference: {fileID: 0}
     - target: {fileID: 4115893726334957975, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
       propertyPath: m_Name
       value: DamageVFX (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4115893726334957975, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8539665314835749391, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
       propertyPath: m_LocalPosition.x
@@ -543,9 +599,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3810027079815068415}
     m_Modifications:
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startSpeed.minScalar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.25342646
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.5793003
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.8018868
+      objectReference: {fileID: 0}
     - target: {fileID: 4115893726334957975, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
       propertyPath: m_Name
       value: DamageVFX (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4115893726334957975, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8539665314835749391, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
       propertyPath: m_LocalPosition.x
@@ -605,9 +689,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3810027079815068415}
     m_Modifications:
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startSpeed.minScalar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.25342646
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.5793003
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.8018868
+      objectReference: {fileID: 0}
     - target: {fileID: 4115893726334957975, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
       propertyPath: m_Name
       value: DamageVFX (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4115893726334957975, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8539665314835749391, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
       propertyPath: m_LocalPosition.x
@@ -667,9 +779,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3810027079815068415}
     m_Modifications:
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startSpeed.minScalar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.25342646
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.5793003
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904246016609556466, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.8018868
+      objectReference: {fileID: 0}
     - target: {fileID: 4115893726334957975, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
       propertyPath: m_Name
       value: DamageVFX (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4115893726334957975, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8539665314835749391, guid: 1ba192f0aa4f3f142829168a87594e28, type: 3}
       propertyPath: m_LocalScale.x

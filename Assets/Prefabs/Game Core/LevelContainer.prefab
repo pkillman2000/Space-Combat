@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &386836478655512072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1764989571900311480}
+  - component: {fileID: 7369955727901600145}
+  m_Layer: 0
+  m_Name: LevelContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1764989571900311480
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386836478655512072}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7369955727901600145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386836478655512072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 258e8a016445f384594e6bd58ab15dfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 0
+  sceneName: 
+  minX: 0
+  maxX: 0
+  minY: 0
+  maxY: 0
+  numberOfStars: 0
+  primaryFireRate: 0
+  primaryDamage: 0
+  shipSpeed: 0
+  shieldStrength: 0
+  armor: 0
+  armorWeight: 0
+  shieldWeight: 0
+  missileWeight: 0
+  asteroidFieldWeight: 0
+  debrisFieldWeight: 0
+  gravimetricAnchorWeight: 0
+  quasarWeight: 0
+  voidGateWeight: 0
+  gasCloudWeight: 0
+  blackHoleWeight: 0
+  nebulaWeight: 0
+  gruntWeight: 0
+  skirmisherWeight: 0
+  bomberWeight: 0
+  sentinelWeight: 0
+  spreadShooterWeight: 0
+  mineLayerWeight: 0
+  predatorWeight: 0
+  pulsarWeight: 0
+  interceptorWeight: 0
+  dreadnoughtWeight: 0
