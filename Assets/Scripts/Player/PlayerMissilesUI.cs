@@ -21,14 +21,8 @@ public class PlayerMissilesUI : MonoBehaviour
         else
         {
             _gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
-            _gridLayoutGroup.constraintCount = 3;
+            _gridLayoutGroup.constraintCount = 5;
         }
-    }
-
-
-    void Update()
-    {
-        
     }
     
     public void SetMissiles(int currentMissiles)

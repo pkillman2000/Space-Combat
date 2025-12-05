@@ -12,7 +12,7 @@ public class LoadSceneOnClick : MonoBehaviour
     [SerializeField]
     private string _sceneName;
     private void Start()
-    {
+    {        
         _playerInputActions = new GamePlay();
 
         if (_playerInputActions == null)
@@ -25,7 +25,7 @@ public class LoadSceneOnClick : MonoBehaviour
         }
 
         _playerInputActions.UI.Cancel.performed += Select_Performed;
-
+        
         _sceneLoader = GetComponent<SceneLoader>();
         if (_sceneLoader == null)
         {

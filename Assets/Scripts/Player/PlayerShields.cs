@@ -44,10 +44,9 @@ public class PlayerShields : MonoBehaviour
 
     private void UpdateShieldColor()
     {
-        _currentShieldStrengthPercentage = (_currentShieldStrength / _maxShieldStrength) * 100;
+        _currentShieldStrengthPercentage = ((float)_currentShieldStrength / (float)_maxShieldStrength) * 100;
         _currentShieldStrengthPercentage = Mathf.Clamp( _currentShieldStrengthPercentage, 0.0f, 100.0f);
 
-        /*
         if (_currentShieldStrengthPercentage > 50)
         {
             // Lerp from green to yellow (100 to 51)
@@ -56,20 +55,11 @@ public class PlayerShields : MonoBehaviour
         }
         else
         {
-            // Lerp from blue to red (50 to 0)
-            //float t = (_currentShieldStrengthPercentage - 1f) / (50f - 0f); // normalize between 1 and 0
-            float t = (_currentShieldStrengthPercentage) / (50f); // normalize between 1 and 0
-
+            // Lerp from yellow to red (50 to 0)
+            float t = (_currentShieldStrengthPercentage - 1f) / (50f - 0f); // normalize between 1 and 0
             _currentShieldColor = Color.Lerp(_shieldColors[2], _shieldColors[1], t);
         }
-        */
 
-        float t = _currentShieldStrengthPercentage / _maxShieldStrength; // normalize between 1 and 0
-
-        _currentShieldColor = Color.Lerp(_shieldColors[1], _shieldColors[0  ], t);
-
-        Debug.Log($"Shield Strength: {_currentShieldStrengthPercentage}%, Color: {_currentShieldColor}");
         _shieldMaterial.SetColor("_TintColor", _currentShieldColor);
     }
-
 }

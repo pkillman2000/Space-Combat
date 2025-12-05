@@ -39,57 +39,29 @@ public class GameplayUI : MonoBehaviour
     {
         _shieldsVFX.SetShieldStrength(strength, maxStrength);
 
-        float shieldPercentage = strength / maxStrength;
+        float shieldPercentage = (float)strength / (float)maxStrength;
         _shields.fillAmount = shieldPercentage;
     }
 
     public void SetArmorStrength(int armor, int maxArmor)
     {
         // Health background fill
-        float healthPercentage = armor / maxArmor;
-        _armor.fillAmount = healthPercentage;
-
-        // Clear all player _damage VFX
-        for (int i = 0; i < _damageVFX.Length; i++)
-        {
-            _damageVFX[i].SetActive(false);
-        }
-
-        // Set _damage as appropriate
-        if(healthPercentage < 83)
-        {
-            _damageVFX[0].SetActive(true);
-        }
-        if(healthPercentage < 66)
-        {
-            _damageVFX[1].SetActive(true);
-        }
-        if(healthPercentage < 50)
-        {
-            _damageVFX[2].SetActive(true);
-        }
-        if(healthPercentage < 33)
-        {
-            _damageVFX[3].SetActive(true);
-        }
-        if (healthPercentage < 16)
-        {
-            _damageVFX[4].SetActive(true);
-        }
+        float healthPercentage = (float)armor / (float)maxArmor;
+        _armor.fillAmount = 1 - healthPercentage;
     }
 
     public void SetPrimaryAmmo(int ammo, int maxAmmo)
     {
-        float ammoPercentage = ammo / maxAmmo;
+        float ammoPercentage = (float)ammo / (float)maxAmmo;
         _primaryAmmo.fillAmount = ammoPercentage;
     }
 
-    public void SetSecondaryAmmo(int ammo, int maxAmmo)
+    public void SetSecondaryAmmo(int ammo)
     {
         _secondaryAmmo.SetMissiles(ammo);
     }
 
-    public void SetEnemyRemaining(int enemyRemaining)
+    public void SetEnemyRemaining(int enemyRemaining, int enemyStart)
     {
         _enemiesRemaining.text = enemyRemaining.ToString();
     }

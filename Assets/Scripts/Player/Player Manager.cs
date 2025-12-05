@@ -6,37 +6,42 @@ public class PlayerManager : MonoBehaviour
 {
     [SerializeField]
     private int _maxHealthPoints;
-    public int _currentHealthPoints;
+    private float _currentHealthPoints;
+    [SerializeField]
     private float _healthRegenrationRate;
     [SerializeField]
-    private GameObject[] _playerDamageVFX;
+    private ParticleSystem[] _playerDamageVFX;
 
     [SerializeField]
     private int _maxShieldPoints;
-    public int _currentShieldPoints;
+    private float _currentShieldPoints;
+    [SerializeField]
     private float _shieldRegenerationRate;
 
     [SerializeField]
     private int _maxPrimaryAmmo;
-    private int _currentPrimaryAmmo;
-    private int _primaryAmmoRegenerationRate;
+    private float _currentPrimaryAmmo;
+    [SerializeField]
+    private float _primaryAmmoRegenerationRate;
 
     [SerializeField]
     private int _maxSecondaryAmmo;
-    private int _currentSecondaryAmmo;
-    private int _secondaryAmmoRegenerationRate;
+    private float _currentSecondaryAmmo;
+    [SerializeField]
+    private float _secondaryAmmoRegenerationRate;
 
     private GameplayUI _gameplayUI;
     private PlayerShields _playerShields;
 
     void Start()
     {
-        _gameplayUI = FindObjectOfType<GameplayUI>();
+        
+        _gameplayUI = FindFirstObjectByType<GameplayUI>();
         if(_gameplayUI == null)
         {
             Debug.LogError("GameplayUI not found in the scene.");
         }
-
+        
         _playerShields = GetComponent<PlayerShields>();
         if(_playerShields == null)
         {
@@ -47,19 +52,24 @@ public class PlayerManager : MonoBehaviour
         _currentShieldPoints = _maxShieldPoints;
         _currentPrimaryAmmo = _maxPrimaryAmmo;
         _currentSecondaryAmmo = _maxSecondaryAmmo;
+
+        TakeDamage(60); // For testing purposes only
+
+        ClearDamage();
+        _gameplayUI.SetArmorStrength(Mathf.RoundToInt(_currentHealthPoints), _maxHealthPoints);
+        _gameplayUI.SetShieldStrength(Mathf.RoundToInt(_currentShieldPoints), _maxShieldPoints);
+        _gameplayUI.SetPrimaryAmmo(Mathf.RoundToInt(_currentPrimaryAmmo), _maxPrimaryAmmo);
+        _gameplayUI.SetSecondaryAmmo(Mathf.RoundToInt(_currentSecondaryAmmo));
     }
 
     
     void Update()
     {
-        /*
+        
         RegenerateHealth();
         RegenerateShields();
         RegeneratePrimaryAmmo();
         RegenerateSecondaryAmmo();
-        */
-
-        UpdateUI();
     }
 
     public void TakeDamage(int damageAmount)
@@ -67,29 +77,21 @@ public class PlayerManager : MonoBehaviour
         if(_currentShieldPoints > damageAmount)
         {
             _currentShieldPoints -= damageAmount;
+            _gameplayUI.SetShieldStrength(Mathf.RoundToInt(_currentShieldPoints), _maxShieldPoints);
         }
         else
         {
-            int remainingDamage = damageAmount - _currentShieldPoints;
+            int remainingDamage = damageAmount - Mathf.RoundToInt(_currentShieldPoints);
             _currentShieldPoints = 0;
             _currentHealthPoints -= remainingDamage;
+            DisplayDamage();
+            _gameplayUI.SetArmorStrength(Mathf.RoundToInt(_currentHealthPoints), _maxHealthPoints);
         }
 
         if(_currentHealthPoints <= 0)
         {
             Debug.Log("Player has died.");
         }
-
-        UpdateUI();
-    }
-
-    private void UpdateUI()
-    {
-        //_playerShields.SetShieldStrength(_currentShieldPoints, _maxShieldPoints);
-        DisplayDamage();
-
-        _gameplayUI.SetShieldStrength(_currentShieldPoints, _maxShieldPoints);
-        _gameplayUI.SetArmorStrength(_currentHealthPoints, _maxHealthPoints);
     }
 
     private void DisplayDamage()
@@ -97,58 +99,63 @@ public class PlayerManager : MonoBehaviour
         ClearDamage();
 
         float healthPercentage = ((float)_currentHealthPoints / (float)_maxHealthPoints) * 100f;
-
+        /*
+         * This was written this way because there is a bug
+         * that causes crashes when trying to manipulate
+         * ParticleSystem arrays in loops.
+         */
         switch (healthPercentage)
         {            
             case float n when n > 80 && n < 100:
-                _playerDamageVFX[0].SetActive(true);
+                _playerDamageVFX[0].Play();
             break;
 
             case float n when n > 60 && n <= 80:
-                _playerDamageVFX[0].SetActive(true);
-                _playerDamageVFX[1].SetActive(true);
-            break;
+                _playerDamageVFX[0].Play();
+                _playerDamageVFX[1].Play();
+                break;
             
             case float n when n > 40 && n <= 60:
-                _playerDamageVFX[0].SetActive(true);
-                _playerDamageVFX[1].SetActive(true);
-                _playerDamageVFX[2].SetActive(true);
-            break;
+                _playerDamageVFX[0].Play();
+                _playerDamageVFX[1].Play();
+                _playerDamageVFX[2].Play();
+                break;
             
             case float n when n > 20 && n <= 40:
-                _playerDamageVFX[0].SetActive(true);
-                _playerDamageVFX[1].SetActive(true);
-                _playerDamageVFX[2].SetActive(true);
-                _playerDamageVFX[3].SetActive(true);
-            break;
+                _playerDamageVFX[0].Play();
+                _playerDamageVFX[1].Play();
+                _playerDamageVFX[2].Play();
+                _playerDamageVFX[3].Play();
+                break;
             
             case float n when n > 0 && n <= 20:
-                _playerDamageVFX[0].SetActive(true);
-                _playerDamageVFX[1].SetActive(true);
-                _playerDamageVFX[2].SetActive(true);
-                _playerDamageVFX[3].SetActive(true);
-                _playerDamageVFX[4].SetActive(true);
+                _playerDamageVFX[0].Play();
+                _playerDamageVFX[1].Play();
+                _playerDamageVFX[2].Play();
+                _playerDamageVFX[3].Play();
+                _playerDamageVFX[4].Play();
             break;
         }
     }
 
     private void ClearDamage()
     {
-        for (int i = 0; i < _playerDamageVFX.Length; i++)
-        {
-            _playerDamageVFX[i].SetActive(false);
-        }
-        
-        UpdateUI();
+        _playerDamageVFX[0].Stop();
+        _playerDamageVFX[1].Stop(); 
+        _playerDamageVFX[2].Stop(); 
+        _playerDamageVFX[3].Stop(); 
+        _playerDamageVFX[4].Stop();
     }
 
     private void RegenerateShields()
     {
         if(_currentShieldPoints < _maxShieldPoints)
         {
-            _currentShieldPoints += Mathf.FloorToInt(_shieldRegenerationRate * Time.deltaTime);
+            _currentShieldPoints += _shieldRegenerationRate * Time.deltaTime;
             _currentShieldPoints = Mathf.Clamp(_currentShieldPoints, 0, _maxShieldPoints);
-            UpdateUI();
+
+            _playerShields.SetShieldStrength(Mathf.RoundToInt(_currentShieldPoints), _maxShieldPoints);
+            _gameplayUI.SetShieldStrength(Mathf.RoundToInt(_currentShieldPoints), _maxShieldPoints);
         }
     }
 
@@ -156,9 +163,9 @@ public class PlayerManager : MonoBehaviour
     {
         if(_currentHealthPoints < _maxHealthPoints)
         {
-            _currentHealthPoints += Mathf.FloorToInt(_healthRegenrationRate * Time.deltaTime);
+            _currentHealthPoints += _healthRegenrationRate * Time.deltaTime;
             _currentHealthPoints = Mathf.Clamp(_currentHealthPoints, 0, _maxHealthPoints); 
-            UpdateUI();
+            _gameplayUI.SetArmorStrength(Mathf.RoundToInt(_currentHealthPoints), _maxHealthPoints);
         }
     }
 
@@ -166,9 +173,9 @@ public class PlayerManager : MonoBehaviour
     {
         if(_currentPrimaryAmmo < _maxPrimaryAmmo)
         {
-            _currentPrimaryAmmo += Mathf.FloorToInt(_primaryAmmoRegenerationRate * Time.deltaTime);
+            _currentPrimaryAmmo += _primaryAmmoRegenerationRate * Time.deltaTime;
             _currentPrimaryAmmo = Mathf.Clamp(_currentPrimaryAmmo, 0, _maxPrimaryAmmo);
-            UpdateUI();
+            _gameplayUI.SetPrimaryAmmo(Mathf.FloorToInt(_currentPrimaryAmmo), _maxPrimaryAmmo);
         }
     }   
 
@@ -176,15 +183,15 @@ public class PlayerManager : MonoBehaviour
     {
         if(_currentSecondaryAmmo < _maxSecondaryAmmo)
         {
-            _currentSecondaryAmmo += Mathf.FloorToInt(_secondaryAmmoRegenerationRate * Time.deltaTime);
+            _currentSecondaryAmmo += _secondaryAmmoRegenerationRate * Time.deltaTime;
             _currentSecondaryAmmo = Mathf.Clamp(_currentSecondaryAmmo, 0, _maxSecondaryAmmo);
-            UpdateUI();
+            _gameplayUI.SetSecondaryAmmo(Mathf.FloorToInt(_currentSecondaryAmmo));
         }
     }
 
     public bool CanFirePrimary()
     {
-        return _currentPrimaryAmmo > 0;
+        return Mathf.FloorToInt(_currentPrimaryAmmo) > 0;
     }
 
     public void PrimaryFired()
@@ -194,7 +201,7 @@ public class PlayerManager : MonoBehaviour
 
     public bool CanFireSecondary()
     {
-        return _currentSecondaryAmmo > 0;
+        return Mathf.FloorToInt(_currentSecondaryAmmo) > 0;
     }
 
     public void SecondaryFired()

@@ -34,7 +34,7 @@ public class PlayerWeapons : MonoBehaviour
     private PlayerManager _playerManager;
 
     private void OnEnable()
-    {
+    {        
         _inputActions = new GamePlay();
         if (_inputActions == null)
         {
@@ -48,7 +48,7 @@ public class PlayerWeapons : MonoBehaviour
         }
 
         _nextPrimaryFireTime = _primaryWeaponFireRate + Time.time;
-        _nextSecondaryFireTime = _secondaryWeaponFireRate + Time.time;
+        _nextSecondaryFireTime = _secondaryWeaponFireRate + Time.time;        
     }
 
     private void OnDisable()

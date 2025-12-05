@@ -13,13 +13,22 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float _rotationSpeed = 100f;
 
+    [Header("Bank Settings")]
+    [SerializeField]
+    private GameObject _fighterModel;
+    [SerializeField]
+    private float _maxBankAngle = 60f;
+    [SerializeField]
+    private float _bankSmoothness = 5f;
+    private float _currentBankAngle = 0f;
+
     private GamePlay _inputActions;
 
     private Vector3 _movement;
     private float _rotation;
 
     private void OnEnable()
-    {
+    {        
         _inputActions = new GamePlay();
         if (_inputActions == null)
         {
@@ -28,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             _inputActions.Movement.Enable();
-        }
+        }        
     }
 
     private void OnDisable()
@@ -37,9 +46,10 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Update()
-    {
+    {        
         Vector2 direction = _inputActions.Movement.Move.ReadValue<Vector2>();
-        MovePlayer(direction);
+        MovePlayer(direction);  
+        BankOnRotation(direction);
     }
 
     private void MovePlayer(Vector2 direction)
@@ -56,12 +66,12 @@ public class PlayerMovement : MonoBehaviour
         transform.Translate(_movement, Space.Self);
     }
 
-    private float ClampAngle(float angle, float min, float max)
+    private void BankOnRotation(Vector2 direction)
     {
-        if (angle > 180f)
-        {
-            angle -= 360f;
-        }
-        return Mathf.Clamp(angle, min, max);
+        float rotation = direction.x;
+        float targetBankAngle = -rotation * _maxBankAngle;
+        _currentBankAngle = Mathf.Lerp(_currentBankAngle, targetBankAngle, Time.deltaTime * _bankSmoothness);
+        Quaternion targetRotation = Quaternion.Euler(0, 0, _currentBankAngle);
+        _fighterModel.transform.localRotation = targetRotation;
     }
 }
