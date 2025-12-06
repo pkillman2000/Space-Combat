@@ -53,8 +53,6 @@ public class PlayerManager : MonoBehaviour
         _currentPrimaryAmmo = _maxPrimaryAmmo;
         _currentSecondaryAmmo = _maxSecondaryAmmo;
 
-        TakeDamage(60); // For testing purposes only
-
         ClearDamage();
         _gameplayUI.SetArmorStrength(Mathf.RoundToInt(_currentHealthPoints), _maxHealthPoints);
         _gameplayUI.SetShieldStrength(Mathf.RoundToInt(_currentShieldPoints), _maxShieldPoints);
