@@ -30,6 +30,21 @@ public class Unguided : MonoBehaviour
         }
     }
 
+    public void SetSpeed(float speed)
+    {
+        _speed = speed;
+    }
+
+    public void SetDamage(float damage)
+    {
+        _damage = damage;
+    }
+
+    public void SetLifeTime(float lifeTime)
+    {
+        _lifeTime = lifeTime;
+    }
+
     private void MoveToObjectPool()
     {
         this.transform.position = new Vector3(0, 1, -600);
