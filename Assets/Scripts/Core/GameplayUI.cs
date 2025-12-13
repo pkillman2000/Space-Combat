@@ -22,19 +22,7 @@ public class GameplayUI : MonoBehaviour
     private TMP_Text _score;
     [SerializeField]
     private TMP_Text _enemiesRemaining;
-
-
-    void Start()
-    {
-
-    }
-
-
-    void Update()
-    {
-
-    }
-
+    
     public void SetShieldStrength(int strength, int maxStrength)
     {
         _shieldsVFX.SetShieldStrength(strength, maxStrength);

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7598973286030324996
+--- !u!1 &7239856183000555324
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,23 +8,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1648859888021456491}
-  - component: {fileID: 5412495891369180452}
-  - component: {fileID: 5765865857855509579}
+  - component: {fileID: 9162244660386476182}
+  - component: {fileID: 4200969129837903712}
+  - component: {fileID: 3537064646730756538}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Minimap Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1648859888021456491
+--- !u!4 &9162244660386476182
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7598973286030324996}
+  m_GameObject: {fileID: 7239856183000555324}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 70, z: 0}
@@ -33,13 +33,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!20 &5412495891369180452
+--- !u!20 &4200969129837903712
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7598973286030324996}
+  m_GameObject: {fileID: 7239856183000555324}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
@@ -68,11 +68,11 @@ Camera:
   far clip plane: 1000
   field of view: 87.6
   orthographic: 1
-  orthographic size: 100
+  orthographic size: 220
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 8
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 0114e4d3f4efbfd4d97820175a5a5a47, type: 2}
   m_TargetDisplay: 0
@@ -84,13 +84,13 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &5765865857855509579
+--- !u!114 &3537064646730756538
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7598973286030324996}
+  m_GameObject: {fileID: 7239856183000555324}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5437ac28eec76144283bbdf92d173109, type: 3}
