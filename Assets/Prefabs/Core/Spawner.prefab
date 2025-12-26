@@ -44,18 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deba754ca476773488ad46e6cf492fb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
-  _obstacles:
-  - {fileID: 4825432769237781669, guid: c4f68acfd95ba324cbb035a61660595c, type: 3}
-  - {fileID: 8888893350857371245, guid: e775fa341a0a289489776c7f145e7d63, type: 3}
-  - {fileID: 1801308309726836222, guid: beb630cbfdc51dd4eac876c6a7d159bf, type: 3}
-  - {fileID: 6203810187842748973, guid: 6b07e0781b4e17e4fbe017a2f626b440, type: 3}
-  - {fileID: 7221457359600756679, guid: 25ae39fefc84fa34ca4fb611b4dfff74, type: 3}
-  - {fileID: 2742106932638662505, guid: 7155b64d091229d40acbb64237ea129f, type: 3}
-  - {fileID: 1607432057877353983, guid: 3c4973708cf9fa047a9ad6be85040ed1, type: 3}
-  - {fileID: 6647330829407278932, guid: b0392d672b72b1a40a19e6506370aed2, type: 3}
-  - {fileID: 3149023688938703900, guid: 980d0a79a40d4394085e1bd06edfd61f, type: 3}
-  - {fileID: 7801904608354901292, guid: d237544d99c34ed40b23527db047995e, type: 3}
-  - {fileID: 5662615542843200084, guid: a09a683bd0aaa4a4eb3d83270f9a7081, type: 3}
+  _obstacles: []
   _totalObstacleCount: 50
+  _enemies: []
+  _totalEnemyCount: 0
+  _star: {fileID: 0}
+  _totalStarCount: 0
   _minMaxX: {x: -5000, y: 5000}
   _minMaxZ: {x: -5000, y: 5000}

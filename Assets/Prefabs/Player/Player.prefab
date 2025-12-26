@@ -10228,32 +10228,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eee76cc96467384e809875f630dc4fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerWeapons
-  _primaryWeaponPrefab:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   _primaryWeaponSpawnPoints:
   - {fileID: 2516118485495008588}
   - {fileID: 5655440747853893323}
@@ -10261,17 +10235,6 @@ MonoBehaviour:
   - {fileID: 7021888087551390377}
   _primaryWeaponActive: 01010000
   _primaryWeaponFireRate: 0.5
-  _secondaryWeaponPrefab:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   _secondaryWeaponSpawnPoints:
   - {fileID: 5180649747224639056}
   - {fileID: 3689847163332663113}
