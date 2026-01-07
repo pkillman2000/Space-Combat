@@ -4,16 +4,22 @@ using UnityEngine;
 public class DestructibleObstacle : MonoBehaviour
 {
     [SerializeField]
-    private List<GameObject> obstaclePrefabs;
+    private GameObject _destructibleObstaclePrefab;
+    [SerializeField]
+    private GameObject _explosion;
 
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Player Weapon"))
+        {
+            Explode();
+        }
     }
 
-
-    void Update()
+    private void Explode()
     {
-        
+        Instantiate(_explosion, transform.position, Quaternion.identity);
+        Instantiate(_destructibleObstaclePrefab, transform.position, Quaternion.identity);
+        Destroy(this.gameObject);
     }
 }

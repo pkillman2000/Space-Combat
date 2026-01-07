@@ -12,9 +12,12 @@ GameObject:
   - component: {fileID: 8658223518869328287}
   - component: {fileID: 5823527047139317745}
   - component: {fileID: 111617922848476463}
+  - component: {fileID: 4033133399632724645}
+  - component: {fileID: 4858931633652261531}
+  - component: {fileID: -4133699937455234967}
   m_Layer: 0
   m_Name: Asteroid_08-40
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,3 +107,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RandomRotation
   _minRotationSpeed: 5
   _maxRotationSpeed: 10
+--- !u!114 &4033133399632724645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519656274738022769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa75fa583be458741ac1456abf299100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestructibleObstacle
+  _destructibleObstaclePrefab: {fileID: 2487928092148010620, guid: f7658c444b9c1574294050b548b160f7, type: 3}
+  _explosion: {fileID: 1530509699144389570, guid: 8e6385d9de3f8214c912f7a8cf211e27, type: 3}
+--- !u!135 &4858931633652261531
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519656274738022769}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.7474348
+  m_Center: {x: -0.01943293, y: 0.14033584, z: -0.05783185}
+--- !u!114 &-4133699937455234967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519656274738022769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa75fa583be458741ac1456abf299100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestructibleObstacle
+  _destructibleObstaclePrefab: {fileID: 2487928092148010620, guid: f7658c444b9c1574294050b548b160f7, type: 3}
+  _explosion: {fileID: 1530509699144389570, guid: 8e6385d9de3f8214c912f7a8cf211e27, type: 3}

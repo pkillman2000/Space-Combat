@@ -12,9 +12,12 @@ GameObject:
   - component: {fileID: 4661474827344397811}
   - component: {fileID: 7879430036283933517}
   - component: {fileID: 4529877270723589909}
+  - component: {fileID: 5666907568109173303}
+  - component: {fileID: -7451040012016354384}
+  - component: {fileID: 1267393909753951321}
   m_Layer: 0
   m_Name: Asteroid_01 - 40
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,10 +30,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1194724514841058086}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.46, y: 1.46, z: 1.46}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -104,3 +107,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RandomRotation
   _minRotationSpeed: 5
   _maxRotationSpeed: 10
+--- !u!114 &5666907568109173303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194724514841058086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa75fa583be458741ac1456abf299100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestructibleObstacle
+  _destructibleObstaclePrefab: {fileID: 2487928092148010620, guid: f7658c444b9c1574294050b548b160f7, type: 3}
+  _explosion: {fileID: 1530509699144389570, guid: 8e6385d9de3f8214c912f7a8cf211e27, type: 3}
+--- !u!135 &-7451040012016354384
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194724514841058086}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 12.599349
+  m_Center: {x: 0.103616714, y: 0.052381992, z: 0.195086}
+--- !u!114 &1267393909753951321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194724514841058086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa75fa583be458741ac1456abf299100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestructibleObstacle
+  _destructibleObstaclePrefab: {fileID: 2487928092148010620, guid: f7658c444b9c1574294050b548b160f7, type: 3}
+  _explosion: {fileID: 1530509699144389570, guid: 8e6385d9de3f8214c912f7a8cf211e27, type: 3}

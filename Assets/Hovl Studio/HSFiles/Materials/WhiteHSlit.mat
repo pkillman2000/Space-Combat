@@ -11,9 +11,9 @@ Material:
   m_Shader: {fileID: -6465566751694194690, guid: 456f62aa2a1d4b7448998cd3cc4f20d1, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - _DISABLE_SSR_TRANSPARENT
-  m_InvalidKeywords: []
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -84,7 +84,6 @@ Material:
     - _EnableFogOnTransparent: 1
     - _ExcludeFromTUAndAA: 0
     - _Metallic_value: 0
-    - _Occlusion: 0.1
     - _OpaqueCullMode: 2
     - _QueueControl: 1
     - _QueueOffset: 0

@@ -60,9 +60,9 @@ public class PlayerMovement : MonoBehaviour
         _rotation = _rotationSpeed * Time.deltaTime * direction.x;
         _movement = forwardDirection * _moveSpeed * Time.deltaTime * direction.y;
 
-        // Change directiomn of player
+        // Change directiomn of _player
         transform.Rotate(0, _rotation, 0, Space.World);
-        // Move player forward/backward
+        // Move _player forward/backward
         transform.Translate(_movement, Space.Self);
     }
 

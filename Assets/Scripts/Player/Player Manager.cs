@@ -45,7 +45,7 @@ public class PlayerManager : MonoBehaviour
         _playerShields = GetComponent<PlayerShields>();
         if(_playerShields == null)
         {
-            Debug.LogError("PlayerShields component not found on the player.");
+            Debug.LogError("PlayerShields component not found on the _player.");
         }
 
         _currentHealthPoints = _maxHealthPoints;

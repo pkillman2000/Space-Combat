@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3433233810661909155}
   - component: {fileID: 3457339284726237725}
   - component: {fileID: 8927063312042107181}
+  - component: {fileID: 7451326171675041846}
   m_Layer: 0
   m_Name: Gameplay Camera
   m_TagString: MainCamera
@@ -97,3 +98,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FollowCamera
   _player: {fileID: 0}
+--- !u!81 &7451326171675041846
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953135990364323623}
+  m_Enabled: 1
